@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <style>
+        /* Background & font */
+        body {
+            font-family: "Georgia", serif; /* Classy serif font */
+            background-color: #121212; /* Dark, expensive-looking background */
+            color: #e6c28b; /* Gold text for elegance */
+            text-align: center;
+            padding: 40px;
+        }
+        
+        /* Form styling */
+        form {
+            background: #1e1e1e; /* Deep black form for contrast */
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(230, 194, 139, 0.4); /* Subtle gold glow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Input fields */
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #e6c28b; /* Gold border */
+            border-radius: 6px;
+            background-color: #2a2a2a; /* Darker input background */
+            color: #fff; /* White text */
+            font-size: 16px;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #c8b08e; /* Soft gold placeholder */
+        }
+
+        /* Button styling */
+        button {
+            background: linear-gradient(135deg, #e6c28b, #c8a45c); /* Gold gradient */
+            color: #121212;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 60%;
+            box-shadow: 0px 4px 10px rgba(230, 194, 139, 0.5);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #f1d18a, #e6b86b); /* Lighter gold hover */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 28px;">✨ CV Generator ✨</h1>
+    <form action="/generate_cv" method="post">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="education" placeholder="Education Details" required></textarea>
+        <textarea name="experience" placeholder="Work Experience" required></textarea>
+        <textarea name="skills" placeholder="Skills" required></textarea>
+        <button type="submit">Generate CV</button>
+    </form>
+</body>
+</html>
